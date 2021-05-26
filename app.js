@@ -24,7 +24,8 @@ cameraTrigger.onclick = function () {
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
     cameraOutput.src = cameraSensor.toDataURL("image/webp");
-    document.getElementById('imagemResult').value = cameraSensor.toDataURL("image/webp");
+    //document.getElementById('imagemResult').value = cameraSensor.toDataURL("image/webp");
+    document.getElementById('imagemResult').value = cameraSensor.toDataURL('image/jpeg', 1.0);
     cameraOutput.classList.add("taken");
 };
 // Start the video stream when the window loads
